@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 from random import randbytes
 from hashlib import sha256
 from binascii import hexlify

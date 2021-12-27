@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 import requests
 import json
 import base64
@@ -315,7 +315,7 @@ def comment_hidden_image(payload: bytes):
 
     if(res.status_code == 200):
         url = res.json()["data"]["url"]
-        body = f"{random.choice(captions)}\n\n![]({url})"
+        body = f"{random.choice(captions)}![]({url})"
         return send_comment(body)
     else:
         return res

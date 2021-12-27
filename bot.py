@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 import requests
 import json
 import base64
@@ -127,7 +127,7 @@ def comment_cat_image(payload: bytes):
 
     if(res.status_code == 200):
         url = res.json()["data"]["url"]
-        body = f"{random.choice(captions)}\n\n![Very funny cat]({url})"
+        body = f"{random.choice(captions)}\n![Very funny cat]({url})"
         return send_comment(body)
     else:
         return res
